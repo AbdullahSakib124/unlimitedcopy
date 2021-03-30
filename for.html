@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color:  #ccc;
+        }
+        .center{
+            /* align-items: center; */
+            background: linear-gradient(#00000028, rgba(226, 16, 191, 0.24));
+            width:  100vw;
+            height: 100vh;
+        }
+        input{
+            outline: none;
+            border: none;
+            background-color: #5f075f;
+            padding: 20px 5px;
+            margin: 10px 60px;
+            border-radius: 16px;
+            box-shadow: 2px 2px 3px #000;
+        }
+        button{
+            border: none;
+            padding: 8px 50px;
+            background-color: #ccc;
+            color: #333;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px #000;
+            margin: 20px 85px
+        }
+        .child{
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="child">
+            <input id="sent" type="text" placeholder="Enter your sentence">
+    <br>
+    <input id="num" type="number" placeholder="How_Much">
+    <br>
+    <button onclick="copy()">Test</button>
+    <hr>
+    <h3>Abdullah Sakib</h3>
+        </div>
+    
+    <script>
+        function copy(){
+            var s = document.getElementById("sent").value;
+            var n = document.getElementById("num").value
+            for(var i = 0; i <= n; i++){
+                document.write( `${i + 1}.${s}\t`)
+            }
+        }
+    </script>
+</body>
+</html>
